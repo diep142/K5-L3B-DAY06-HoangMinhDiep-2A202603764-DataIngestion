@@ -1,0 +1,115 @@
+{
+  "retrieval": {
+    "A": {
+      "dev": {
+        "questions": 15,
+        "hit_at_1": 7,
+        "evidence_hit_at_3": 12
+      },
+      "test": {
+        "questions": 5,
+        "hit_at_1": 2,
+        "evidence_hit_at_3": 3,
+        "filtered_questions": 4,
+        "filter_compliant": null
+      }
+    },
+    "B": {
+      "dev": {
+        "questions": 15,
+        "hit_at_1": 8,
+        "evidence_hit_at_3": 10
+      },
+      "test": {
+        "questions": 5,
+        "hit_at_1": 3,
+        "evidence_hit_at_3": 4,
+        "filtered_questions": 4,
+        "filter_compliant": null
+      }
+    },
+    "C": {
+      "dev": {
+        "questions": 15,
+        "hit_at_1": 8,
+        "evidence_hit_at_3": 11
+      },
+      "test": {
+        "questions": 5,
+        "hit_at_1": 3,
+        "evidence_hit_at_3": 4,
+        "filtered_questions": 4,
+        "filter_compliant": 4
+      }
+    }
+  },
+  "strategies": {
+    "A": {
+      "chunk_count": 328,
+      "total_characters": 156744,
+      "min_characters": 144,
+      "median_characters": 500.0,
+      "mean_characters": 477.88,
+      "max_characters": 500,
+      "total_tokens": 41230,
+      "min_tokens": 34,
+      "median_tokens": 129.0,
+      "mean_tokens": 125.7,
+      "max_tokens": 170,
+      "chunking_seconds": 0.0017,
+      "tokenization_seconds": 0.0856,
+      "embedding_seconds": 3.0848,
+      "storage_seconds": 0.1492,
+      "ingest_seconds": 3.3213,
+      "cost_usd": 0,
+      "retrieval_seconds": 0.7544,
+      "mean_retrieval_ms": 37.721
+    },
+    "B": {
+      "chunk_count": 188,
+      "total_characters": 142608,
+      "min_characters": 98,
+      "median_characters": 836.0,
+      "mean_characters": 758.55,
+      "max_characters": 999,
+      "total_tokens": 36611,
+      "min_tokens": 30,
+      "median_tokens": 212.5,
+      "mean_tokens": 194.74,
+      "max_tokens": 256,
+      "chunking_seconds": 0.0097,
+      "tokenization_seconds": 0.0785,
+      "embedding_seconds": 4.9486,
+      "storage_seconds": 0.1574,
+      "ingest_seconds": 5.1941,
+      "cost_usd": 0,
+      "retrieval_seconds": 0.5663,
+      "mean_retrieval_ms": 28.317
+    },
+    "C": {
+      "chunk_count": 188,
+      "total_characters": 142608,
+      "min_characters": 98,
+      "median_characters": 836.0,
+      "mean_characters": 758.55,
+      "max_characters": 999,
+      "total_tokens": 36611,
+      "min_tokens": 30,
+      "median_tokens": 212.5,
+      "mean_tokens": 194.74,
+      "max_tokens": 256,
+      "chunking_seconds": 0,
+      "tokenization_seconds": 0,
+      "embedding_seconds": 0,
+      "storage_seconds": 0.1716,
+      "ingest_seconds": 0.1716,
+      "cost_usd": 0,
+      "chunking_reused_from": "B (identical chunks)",
+      "tokenization_reused_from": "B (identical chunks)",
+      "embedding_reused_from": "B (identical chunks)",
+      "retrieval_seconds": 0.5315,
+      "mean_retrieval_ms": 26.575
+    }
+  },
+  "manual_assessment": "Các tiêu chí đánh giá được tôi chấm, rà soát và xác nhận theo rubric; kết quả retrieval cũng đã được xem."
+}

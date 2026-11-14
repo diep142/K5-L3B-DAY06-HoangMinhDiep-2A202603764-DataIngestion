@@ -1,0 +1,225 @@
+{
+  "run_at": "2026-11-14T03:34:29.911465+00:00",
+  "corpus": "data\\alice_units.jsonl",
+  "benchmark": "benchmark\\questions.jsonl",
+  "question_count": 20,
+  "benchmark_language": "English",
+  "test_split_note": "The same five test question/evidence pairs were evaluated previously with Vietnamese question text. Treat this English run as exploratory, not as an untouched independent holdout.",
+  "corpus_units": 46,
+  "total_normalized_characters": 142892,
+  "minimum_normalized_unit_characters": 1590,
+  "normalized_unit_characters": [
+    {
+      "unit_id": "alice-ch01-u01",
+      "char_count": 3352
+    },
+    {
+      "unit_id": "alice-ch01-u02",
+      "char_count": 3036
+    },
+    {
+      "unit_id": "alice-ch01-u03",
+      "char_count": 3354
+    },
+    {
+      "unit_id": "alice-ch01-u04",
+      "char_count": 1590
+    },
+    {
+      "unit_id": "alice-ch02-u01",
+      "char_count": 3059
+    },
+    {
+      "unit_id": "alice-ch02-u02",
+      "char_count": 3609
+    },
+    {
+      "unit_id": "alice-ch02-u03",
+      "char_count": 4222
+    },
+    {
+      "unit_id": "alice-ch03-u01",
+      "char_count": 3195
+    },
+    {
+      "unit_id": "alice-ch03-u02",
+      "char_count": 3006
+    },
+    {
+      "unit_id": "alice-ch03-u03",
+      "char_count": 2948
+    },
+    {
+      "unit_id": "alice-ch04-u01",
+      "char_count": 3075
+    },
+    {
+      "unit_id": "alice-ch04-u02",
+      "char_count": 3071
+    },
+    {
+      "unit_id": "alice-ch04-u03",
+      "char_count": 3062
+    },
+    {
+      "unit_id": "alice-ch04-u04",
+      "char_count": 4622
+    },
+    {
+      "unit_id": "alice-ch05-u01",
+      "char_count": 3154
+    },
+    {
+      "unit_id": "alice-ch05-u02",
+      "char_count": 3137
+    },
+    {
+      "unit_id": "alice-ch05-u03",
+      "char_count": 2939
+    },
+    {
+      "unit_id": "alice-ch05-u04",
+      "char_count": 2581
+    },
+    {
+      "unit_id": "alice-ch06-u01",
+      "char_count": 3023
+    },
+    {
+      "unit_id": "alice-ch06-u02",
+      "char_count": 3019
+    },
+    {
+      "unit_id": "alice-ch06-u03",
+      "char_count": 3003
+    },
+    {
+      "unit_id": "alice-ch06-u04",
+      "char_count": 3016
+    },
+    {
+      "unit_id": "alice-ch06-u05",
+      "char_count": 1724
+    },
+    {
+      "unit_id": "alice-ch07-u01",
+      "char_count": 3017
+    },
+    {
+      "unit_id": "alice-ch07-u02",
+      "char_count": 3023
+    },
+    {
+      "unit_id": "alice-ch07-u03",
+      "char_count": 3037
+    },
+    {
+      "unit_id": "alice-ch07-u04",
+      "char_count": 3567
+    },
+    {
+      "unit_id": "alice-ch08-u01",
+      "char_count": 3163
+    },
+    {
+      "unit_id": "alice-ch08-u02",
+      "char_count": 3031
+    },
+    {
+      "unit_id": "alice-ch08-u03",
+      "char_count": 3053
+    },
+    {
+      "unit_id": "alice-ch08-u04",
+      "char_count": 4374
+    },
+    {
+      "unit_id": "alice-ch09-u01",
+      "char_count": 3094
+    },
+    {
+      "unit_id": "alice-ch09-u02",
+      "char_count": 3067
+    },
+    {
+      "unit_id": "alice-ch09-u03",
+      "char_count": 3270
+    },
+    {
+      "unit_id": "alice-ch09-u04",
+      "char_count": 3156
+    },
+    {
+      "unit_id": "alice-ch10-u01",
+      "char_count": 3195
+    },
+    {
+      "unit_id": "alice-ch10-u02",
+      "char_count": 3057
+    },
+    {
+      "unit_id": "alice-ch10-u03",
+      "char_count": 3294
+    },
+    {
+      "unit_id": "alice-ch10-u04",
+      "char_count": 1792
+    },
+    {
+      "unit_id": "alice-ch11-u01",
+      "char_count": 3013
+    },
+    {
+      "unit_id": "alice-ch11-u02",
+      "char_count": 3080
+    },
+    {
+      "unit_id": "alice-ch11-u03",
+      "char_count": 4246
+    },
+    {
+      "unit_id": "alice-ch12-u01",
+      "char_count": 3043
+    },
+    {
+      "unit_id": "alice-ch12-u02",
+      "char_count": 2958
+    },
+    {
+      "unit_id": "alice-ch12-u03",
+      "char_count": 3042
+    },
+    {
+      "unit_id": "alice-ch12-u04",
+      "char_count": 2523
+    }
+  ],
+  "split_counts": {
+    "dev": 15,
+    "test": 5
+  },
+  "embedding_provider": "FastEmbed (local)",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_package_version": "0.9.1",
+  "embedding_dimensions": 384,
+  "document_query_handling": "Same model; embed() for documents and query_embed() for queries.",
+  "model_initialization_seconds": 0.8196,
+  "query_embedding_seconds": 0.1025,
+  "ingest_timing_scope": "Chunking, tokenization, document embedding and vector-store writes; model initialization is reported separately. Strategy C reuses B's chunks, token counts and vectors, so its ingest time is incremental storage.",
+  "token_count_method": "FastEmbed TextEmbedding.token_count",
+  "vector_store": "PostgreSQL + pgvector",
+  "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+  "pgvector_version": "0.8.7",
+  "distance_metric": "cosine",
+  "search_mode": "Exact; no approximate vector index created",
+  "metadata_filters": [
+    "chapter",
+    "section"
+  ],
+  "strategies": {
+    "A": "500-character fixed chunks, overlap 50, no filter",
+    "B": "Paragraph-aware chunks up to 1,000 characters, no filter",
+    "C": "Same chunks as B, apply question-provided metadata filter"
+  },
+  "cost_usd": 0
+}

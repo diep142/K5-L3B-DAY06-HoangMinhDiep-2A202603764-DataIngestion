@@ -1,0 +1,7 @@
+Tôi đã rà soát và xác nhận các nhãn theo rubric; các kết quả retrieval đã được xem. Mỗi nhãn có lý do gắn với chunk hoặc metadata tương ứng.
+Coherence: 0 = bị cắt giữa ý/thiếu chủ thể làm không hiểu; 1 = hiểu một phần hoặc thiếu ngữ cảnh; 2 = tự hiểu được và giữ trọn ý.
+Grounding: 0 = không có bằng chứng; 1 = có bằng chứng nhưng thiếu điều kiện/ngữ cảnh; 2 = đủ bằng chứng để trả lời và truy nguồn.
+Metadata: đối chiếu source, unit/page, chapter và filter được yêu cầu với nguồn; ghi lỗi cụ thể trong notes. Nhãn metadata chỉ đánh giá truy vết/độ đúng của metadata, không đánh giá chất lượng câu trả lời.
+Mẫu coherence gồm 10 vị trí theo thứ tự nguồn, dùng chung cho cả ba chiến lược. Mẫu grounding/metadata gồm 5 câu test và top-3 của mỗi chiến lược.
+Kiểm tra metadata: 45/45 kết quả test khớp source URL, unit/page ID, chapter và section. Chiến lược C tuân thủ 4/4 câu test có filter; A và B không áp dụng filter.
+Bộ test chỉ mang tính minh họa, không phải holdout chưa từng xem: cùng các cặp câu hỏi/evidence đã từng được đánh giá với câu hỏi tiếng Việt.

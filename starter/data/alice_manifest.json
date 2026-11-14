@@ -1,0 +1,403 @@
+{
+  "source_id": "alice11",
+  "title": "Alice's Adventures in Wonderland",
+  "author": "Lewis Carroll",
+  "source_path_or_url": "https://www.gutenberg.org/ebooks/11",
+  "download_url": "https://www.gutenberg.org/cache/epub/11/pg11.txt",
+  "local_source_path": "alice_adventures_in_wonderland.txt",
+  "license_or_permission": "The ebook states it is free to use in the United States and distributed under the Project Gutenberg License. Verify local law before reuse or redistribution outside the United States.",
+  "accessed_at": "2026-11-14",
+  "snapshot": "Project Gutenberg ebook #11; most recently updated 2025-06-26",
+  "normalization": "Applied only when starter/src/ingestion.py loads the units; this preparation script preserves source paragraph text.",
+  "segmentation": "Unnormalized source paragraphs are grouped in source order, targeting 3,000 raw characters per unit. A final remainder shorter than 1,500 raw characters is merged into the preceding unit in that chapter. The ingestion stage verifies each normalized unit remains at least 1,500 characters.",
+  "position_definition": "Each unit's position_start and position_end are 0-based, half-open character offsets into alice_story_extract.txt before ingestion normalization; chapter headings are included in the extracted file but not in unit text.",
+  "metadata_schema": [
+    {
+      "field": "unit_id",
+      "type": "string",
+      "source": "Generated from the chapter index and unit index.",
+      "purpose": "Unique traceable identifier for each grouped paragraph unit."
+    },
+    {
+      "field": "source_id",
+      "type": "string",
+      "source": "Constant alice11 for Project Gutenberg ebook #11.",
+      "purpose": "Stable identity for the source work."
+    },
+    {
+      "field": "document_id",
+      "type": "string",
+      "source": "Set to source_id.",
+      "purpose": "Document-level identifier used by ingestion and retrieval."
+    },
+    {
+      "field": "source",
+      "type": "URL string",
+      "source": "Project Gutenberg ebook landing page.",
+      "purpose": "Source provenance for each unit."
+    },
+    {
+      "field": "chapter",
+      "type": "string",
+      "source": "Roman numeral from the source chapter heading.",
+      "purpose": "Chapter-level provenance and metadata filtering."
+    },
+    {
+      "field": "section",
+      "type": "string",
+      "source": "Title from the source chapter heading.",
+      "purpose": "Chapter-title provenance and metadata filtering."
+    },
+    {
+      "field": "position_start",
+      "type": "integer",
+      "source": "Calculated while building alice_story_extract.txt.",
+      "purpose": "Inclusive 0-based source offset before ingestion normalization."
+    },
+    {
+      "field": "position_end",
+      "type": "integer",
+      "source": "position_start plus the raw unit text length.",
+      "purpose": "Exclusive source offset before ingestion normalization."
+    },
+    {
+      "field": "char_count",
+      "type": "integer",
+      "source": "Length of the unnormalized unit text.",
+      "purpose": "Raw unit-size validation and provenance."
+    },
+    {
+      "field": "text",
+      "type": "string",
+      "source": "Source paragraphs grouped in order without text normalization.",
+      "purpose": "Raw content ingested and normalized by starter/src/ingestion.py."
+    }
+  ],
+  "raw_extracted_char_count": 143925,
+  "unit_count": 46,
+  "units_path": "alice_units.jsonl",
+  "units": [
+    {
+      "unit_id": "alice-ch01-u01",
+      "chapter": "I",
+      "position_start": 33,
+      "position_end": 3385,
+      "char_count": 3352
+    },
+    {
+      "unit_id": "alice-ch01-u02",
+      "chapter": "I",
+      "position_start": 3387,
+      "position_end": 6423,
+      "char_count": 3036
+    },
+    {
+      "unit_id": "alice-ch01-u03",
+      "chapter": "I",
+      "position_start": 6425,
+      "position_end": 9864,
+      "char_count": 3439
+    },
+    {
+      "unit_id": "alice-ch01-u04",
+      "chapter": "I",
+      "position_start": 9866,
+      "position_end": 11541,
+      "char_count": 1675
+    },
+    {
+      "unit_id": "alice-ch02-u01",
+      "chapter": "II",
+      "position_start": 11574,
+      "position_end": 14638,
+      "char_count": 3064
+    },
+    {
+      "unit_id": "alice-ch02-u02",
+      "chapter": "II",
+      "position_start": 14640,
+      "position_end": 18265,
+      "char_count": 3625
+    },
+    {
+      "unit_id": "alice-ch02-u03",
+      "chapter": "II",
+      "position_start": 18267,
+      "position_end": 22489,
+      "char_count": 4222
+    },
+    {
+      "unit_id": "alice-ch03-u01",
+      "chapter": "III",
+      "position_start": 22535,
+      "position_end": 25730,
+      "char_count": 3195
+    },
+    {
+      "unit_id": "alice-ch03-u02",
+      "chapter": "III",
+      "position_start": 25732,
+      "position_end": 28738,
+      "char_count": 3006
+    },
+    {
+      "unit_id": "alice-ch03-u03",
+      "chapter": "III",
+      "position_start": 28740,
+      "position_end": 31742,
+      "char_count": 3002
+    },
+    {
+      "unit_id": "alice-ch04-u01",
+      "chapter": "IV",
+      "position_start": 31791,
+      "position_end": 34866,
+      "char_count": 3075
+    },
+    {
+      "unit_id": "alice-ch04-u02",
+      "chapter": "IV",
+      "position_start": 34868,
+      "position_end": 37939,
+      "char_count": 3071
+    },
+    {
+      "unit_id": "alice-ch04-u03",
+      "chapter": "IV",
+      "position_start": 37941,
+      "position_end": 41003,
+      "char_count": 3062
+    },
+    {
+      "unit_id": "alice-ch04-u04",
+      "chapter": "IV",
+      "position_start": 41005,
+      "position_end": 45627,
+      "char_count": 4622
+    },
+    {
+      "unit_id": "alice-ch05-u01",
+      "chapter": "V",
+      "position_start": 45667,
+      "position_end": 48837,
+      "char_count": 3170
+    },
+    {
+      "unit_id": "alice-ch05-u02",
+      "chapter": "V",
+      "position_start": 48839,
+      "position_end": 52024,
+      "char_count": 3185
+    },
+    {
+      "unit_id": "alice-ch05-u03",
+      "chapter": "V",
+      "position_start": 52026,
+      "position_end": 55050,
+      "char_count": 3024
+    },
+    {
+      "unit_id": "alice-ch05-u04",
+      "chapter": "V",
+      "position_start": 55052,
+      "position_end": 57633,
+      "char_count": 2581
+    },
+    {
+      "unit_id": "alice-ch06-u01",
+      "chapter": "VI",
+      "position_start": 57663,
+      "position_end": 60686,
+      "char_count": 3023
+    },
+    {
+      "unit_id": "alice-ch06-u02",
+      "chapter": "VI",
+      "position_start": 60688,
+      "position_end": 63707,
+      "char_count": 3019
+    },
+    {
+      "unit_id": "alice-ch06-u03",
+      "chapter": "VI",
+      "position_start": 63709,
+      "position_end": 66728,
+      "char_count": 3019
+    },
+    {
+      "unit_id": "alice-ch06-u04",
+      "chapter": "VI",
+      "position_start": 66730,
+      "position_end": 69746,
+      "char_count": 3016
+    },
+    {
+      "unit_id": "alice-ch06-u05",
+      "chapter": "VI",
+      "position_start": 69748,
+      "position_end": 71472,
+      "char_count": 1724
+    },
+    {
+      "unit_id": "alice-ch07-u01",
+      "chapter": "VII",
+      "position_start": 71504,
+      "position_end": 74521,
+      "char_count": 3017
+    },
+    {
+      "unit_id": "alice-ch07-u02",
+      "chapter": "VII",
+      "position_start": 74523,
+      "position_end": 77546,
+      "char_count": 3023
+    },
+    {
+      "unit_id": "alice-ch07-u03",
+      "chapter": "VII",
+      "position_start": 77548,
+      "position_end": 80605,
+      "char_count": 3057
+    },
+    {
+      "unit_id": "alice-ch07-u04",
+      "chapter": "VII",
+      "position_start": 80607,
+      "position_end": 84174,
+      "char_count": 3567
+    },
+    {
+      "unit_id": "alice-ch08-u01",
+      "chapter": "VIII",
+      "position_start": 84218,
+      "position_end": 87381,
+      "char_count": 3163
+    },
+    {
+      "unit_id": "alice-ch08-u02",
+      "chapter": "VIII",
+      "position_start": 87383,
+      "position_end": 90414,
+      "char_count": 3031
+    },
+    {
+      "unit_id": "alice-ch08-u03",
+      "chapter": "VIII",
+      "position_start": 90416,
+      "position_end": 93469,
+      "char_count": 3053
+    },
+    {
+      "unit_id": "alice-ch08-u04",
+      "chapter": "VIII",
+      "position_start": 93471,
+      "position_end": 97845,
+      "char_count": 4374
+    },
+    {
+      "unit_id": "alice-ch09-u01",
+      "chapter": "IX",
+      "position_start": 97884,
+      "position_end": 100978,
+      "char_count": 3094
+    },
+    {
+      "unit_id": "alice-ch09-u02",
+      "chapter": "IX",
+      "position_start": 100980,
+      "position_end": 104047,
+      "char_count": 3067
+    },
+    {
+      "unit_id": "alice-ch09-u03",
+      "chapter": "IX",
+      "position_start": 104049,
+      "position_end": 107319,
+      "char_count": 3270
+    },
+    {
+      "unit_id": "alice-ch09-u04",
+      "chapter": "IX",
+      "position_start": 107321,
+      "position_end": 110477,
+      "char_count": 3156
+    },
+    {
+      "unit_id": "alice-ch10-u01",
+      "chapter": "X",
+      "position_start": 110513,
+      "position_end": 113708,
+      "char_count": 3195
+    },
+    {
+      "unit_id": "alice-ch10-u02",
+      "chapter": "X",
+      "position_start": 113710,
+      "position_end": 116767,
+      "char_count": 3057
+    },
+    {
+      "unit_id": "alice-ch10-u03",
+      "chapter": "X",
+      "position_start": 116769,
+      "position_end": 120063,
+      "char_count": 3294
+    },
+    {
+      "unit_id": "alice-ch10-u04",
+      "chapter": "X",
+      "position_start": 120065,
+      "position_end": 121885,
+      "char_count": 1820
+    },
+    {
+      "unit_id": "alice-ch11-u01",
+      "chapter": "XI",
+      "position_start": 121921,
+      "position_end": 124934,
+      "char_count": 3013
+    },
+    {
+      "unit_id": "alice-ch11-u02",
+      "chapter": "XI",
+      "position_start": 124936,
+      "position_end": 128024,
+      "char_count": 3088
+    },
+    {
+      "unit_id": "alice-ch11-u03",
+      "chapter": "XI",
+      "position_start": 128026,
+      "position_end": 132272,
+      "char_count": 4246
+    },
+    {
+      "unit_id": "alice-ch12-u01",
+      "chapter": "XII",
+      "position_start": 132305,
+      "position_end": 135348,
+      "char_count": 3043
+    },
+    {
+      "unit_id": "alice-ch12-u02",
+      "chapter": "XII",
+      "position_start": 135350,
+      "position_end": 138356,
+      "char_count": 3006
+    },
+    {
+      "unit_id": "alice-ch12-u03",
+      "chapter": "XII",
+      "position_start": 138358,
+      "position_end": 141400,
+      "char_count": 3042
+    },
+    {
+      "unit_id": "alice-ch12-u04",
+      "chapter": "XII",
+      "position_start": 141402,
+      "position_end": 143925,
+      "char_count": 2523
+    }
+  ]
+}
